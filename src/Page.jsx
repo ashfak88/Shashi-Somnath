@@ -46,7 +46,7 @@ export default function Page() {
   </button>
 </div>
 
-<audio id="bgMusic" loop preload="auto"><source src="assets/wedding-music.mp3" type="audio/mpeg" /></audio>
+<audio id="bgMusic" loop preload="auto"><source src="assets/SONG.mpeg" type="audio/mpeg" /></audio>
 <button className="music-fab" id="musicBtn" aria-label="Play music">♫</button>
 
 <nav className="side-nav" aria-label="Invitation sections">
