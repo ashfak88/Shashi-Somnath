@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import LogoSS from './LogoSS.jsx'
+import VenueScratchCard from './VenueScratchCard.jsx'
 
 const PROGRAM_TIME = new Date('2026-11-22T12:00:00+05:30').getTime()
 
@@ -36,6 +38,9 @@ export default function Page() {
   <div className="intro-shade"></div>
   <div className="intro-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <button className="intro-center" id="openInvite" aria-label="Touch here to open">
+    <div className="intro-logo-wrap">
+      <LogoSS size={92} variant="dark" className="intro-monogram" />
+    </div>
     <span className="jubilee-badge">50</span>
     <span className="years-text">YEARS OF LOVE</span>
     <span className="couple-script">Shashi</span>
@@ -46,7 +51,7 @@ export default function Page() {
   </button>
 </div>
 
-<audio id="bgMusic" loop preload="auto"><source src="assets/SONG.mpeg" type="audio/mpeg" /></audio>
+<audio id="bgMusic" loop preload="auto"><source src="assets/new song.mpeg" type="audio/mpeg" /></audio>
 <button className="music-fab" id="musicBtn" aria-label="Play music">♫</button>
 
 <nav className="side-nav" aria-label="Invitation sections">
@@ -66,10 +71,10 @@ export default function Page() {
     <div className="hero-bg"></div>
     <div className="veil"></div>
     <div className="section-inner invitation-card reveal">
+      <div className="ram-sita-watermark hero-watermark" aria-hidden="true"></div>
       <p className="eyebrow">WITH LOVE &amp; GRATITUDE</p>
-      <div className="jubilee-emblem">
-        <span className="emblem-50">50</span>
-        <span className="emblem-label">Golden Jubilee</span>
+      <div className="hero-logo-wrap">
+        <LogoSS size={130} variant="gold" className="hero-monogram" />
       </div>
       <h1 className="main-couple">
         <span className="main-name">Shashi</span>
@@ -94,7 +99,7 @@ export default function Page() {
       <div className="quick-details">
         <div><strong>Time</strong><span>12:00 PM</span></div>
         <div><strong>Occasion</strong><span>50th Anniversary (Golden Jubilee)</span></div>
-        <div><strong>Venue</strong><span>Wedding bells, S K Mohit Palace<br />Jhilmil Indrustial Area, Behind Jhilmil Metro Station<br />New Delhi-92</span></div>
+        <div><strong>Venue</strong><span>Wedding bells, S K Mohit Palace<br />Jhilmil Indrustial Area, Behind Jhilmil Metro Station<br />New Delhi-92<br /><a href="https://share.google/eQxPOW2qwpx2CBa8y" target="_blank" rel="noopener noreferrer" className="venue-map-chip">📍 Open Google Maps</a></span></div>
       </div>
       <button className="gold-btn" id="calendarBtn">▣&nbsp;&nbsp;Add to Calendar</button>
     </div>
@@ -114,6 +119,25 @@ export default function Page() {
         <div><b id="secs">{timeLeft.secs}</b><span>SECONDS</span></div>
       </div>
       <div className="garland-stage">
+        <div className="swayamvar-blessing-card">
+          <img
+            src="assets/ram-sita-swayamvar.jpg"
+            alt="Divine Blessings of Shri Ram and Mata Sita Swayamvar"
+            className="swayamvar-img"
+          />
+          <p className="blessing-caption">
+            ✦ सिया राम मय सब जग जानी ✦
+            <em>Seeking the divine blessings of Shri Ram &amp; Mata Sita on 50 Golden Years</em>
+          </p>
+        </div>
+        <div className="anniversary-emblem-stage">
+          <div className="big-50">50</div>
+          <div className="emblem-sub">Years Together</div>
+          <div className="emblem-hearts">❤ &nbsp; ❤ &nbsp; ❤</div>
+        </div>
+        <div className="garland-glow"></div>
+
+        {/* Falling petals placed over the picture and stage */}
         <div className="rose-petal-rain" aria-hidden="true">
           <span className="rose-petal rp1"></span><span className="rose-petal rp2"></span>
           <span className="rose-petal rp3"></span><span className="rose-petal rp4"></span>
@@ -128,12 +152,6 @@ export default function Page() {
           <span className="rose-petal rp21"></span><span className="rose-petal rp22"></span>
           <span className="rose-petal rp23"></span><span className="rose-petal rp24"></span>
         </div>
-        <div className="anniversary-emblem-stage">
-          <div className="big-50">50</div>
-          <div className="emblem-sub">Years Together</div>
-          <div className="emblem-hearts">❤ &nbsp; ❤ &nbsp; ❤</div>
-        </div>
-        <div className="garland-glow"></div>
       </div>
       <p className="moment-caption">Fifty years of love — and counting.</p>
     </div>
@@ -168,18 +186,14 @@ export default function Page() {
                 <strong className="meta-value">12:00 PM onwards</strong>
               </div>
             </div>
-            <div className="program-meta-item full-item">
-              <span className="meta-icon">📍</span>
-              <div>
-                <span className="meta-label">EXACT VENUE &amp; LOCATION</span>
-                <strong className="meta-value">Wedding bells, S K Mohit Palace</strong>
-                <p className="meta-sub">Jhilmil Indrustial Area, Behind Jhilmil Metro Station, New Delhi-92</p>
-              </div>
-            </div>
           </div>
         </article>
       </div>
-      <a className="gold-btn map-link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Wedding+bells+S+K+Mohit+Palace+Jhilmil+Industrial+Area+Behind+Jhilmil+Metro+Station+New+Delhi-92">✦&nbsp;&nbsp;Open Exact Location on Google Maps</a>
+
+      {/* Interactive Venue Scratch Card */}
+      <div className="scratch-section-wrap reveal">
+        <VenueScratchCard />
+      </div>
     </div>
   </section>
 
@@ -187,6 +201,7 @@ export default function Page() {
   {/* ── FOREVER ── */}
   <section className="section forever-section" id="forever">
     <div className="lotus-bg"></div>
+    <div className="ram-sita-watermark forever-watermark" aria-hidden="true"></div>
     <div className="section-inner forever-copy reveal">
       <h2>Fifty<br /><em>{"Golden Years "}<span className="plain-infinity">∞</span></em></h2>
       <p>Your love has been our greatest blessing,<br />your togetherness our family's strength,<br />and your story our forever inspiration.</p>
@@ -238,6 +253,9 @@ export default function Page() {
   <section className="section closing-section" id="closing">
     <div className="closing-bg"></div>
     <div className="section-inner closing-copy reveal">
+      <div className="closing-logo-wrap">
+        <LogoSS size={90} variant="dark" className="closing-monogram" />
+      </div>
       <span className="lantern">✦</span>
       <h2>Thank You</h2>
       <p>for being a part of<br />our golden celebration</p>

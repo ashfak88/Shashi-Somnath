@@ -1,0 +1,71 @@
+<svg viewBox="0 0 240 240" width="240" height="240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2B2" />
+      <stop offset="20%" stop-color="#DFAD36" />
+      <stop offset="45%" stop-color="#FFF8D6" />
+      <stop offset="65%" stop-color="#C99320" />
+      <stop offset="85%" stop-color="#F7DA76" />
+      <stop offset="100%" stop-color="#8F5E06" />
+    </linearGradient>
+
+    <linearGradient id="goldDeep" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7A4E02" />
+      <stop offset="50%" stop-color="#C99320" />
+      <stop offset="100%" stop-color="#F5D061" />
+    </linearGradient>
+
+    <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFDF7" stop-opacity="0.95" />
+      <stop offset="70%" stop-color="#FFF9E6" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#F2DFC0" stop-opacity="0.4" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="120" cy="120" r="104" fill="url(#innerGlow)" />
+  <circle cx="120" cy="120" r="104" stroke="url(#goldMetallic)" stroke-width="2.5" stroke-opacity="0.85" />
+  <circle cx="120" cy="120" r="97" stroke="url(#goldMetallic)" stroke-width="2" stroke-dasharray="2 6.5" stroke-linecap="round" />
+  <circle cx="120" cy="120" r="90" stroke="url(#goldDeep)" stroke-width="1.2" stroke-opacity="0.7" />
+
+  <g stroke="url(#goldMetallic)" fill="url(#goldMetallic)" stroke-width="1" opacity="0.85">
+    <path d="M 46 130 C 44 118 48 106 54 96" fill="none" stroke-width="1.5" />
+    <path d="M 44 126 C 39 123 37 117 40 114 C 44 117 45 122 44 126 Z" />
+    <path d="M 47 115 C 41 110 40 104 44 102 C 47 105 48 111 47 115 Z" />
+    <path d="M 51 104 C 47 98 47 92 51 90 C 54 94 53 100 51 104 Z" />
+    <path d="M 56 94 C 53 87 55 81 60 81 C 61 86 59 91 56 94 Z" />
+
+    <path d="M 194 130 C 196 118 192 106 186 96" fill="none" stroke-width="1.5" />
+    <path d="M 196 126 C 201 123 203 117 200 114 C 196 117 195 122 196 126 Z" />
+    <path d="M 193 115 C 199 110 200 104 196 102 C 193 105 192 111 193 115 Z" />
+    <path d="M 189 104 C 193 98 193 92 189 90 C 186 94 187 100 189 104 Z" />
+    <path d="M 184 94 C 187 87 185 81 180 81 C 179 86 181 91 184 94 Z" />
+  </g>
+
+  <g id="crown" transform="translate(120, 48)">
+    <path d="M -16 6 L -20 -4 L -10 1 L 0 -10 L 10 1 L 20 -4 L 16 6 Z" fill="url(#goldMetallic)" stroke="url(#goldDeep)" stroke-width="0.8" />
+    <circle cx="0" cy="-12" r="2.2" fill="#FFF8D6" stroke="url(#goldDeep)" stroke-width="0.6" />
+    <circle cx="-20" cy="-6" r="1.8" fill="#FFF8D6" stroke="url(#goldDeep)" stroke-width="0.6" />
+    <circle cx="20" cy="-6" r="1.8" fill="#FFF8D6" stroke="url(#goldDeep)" stroke-width="0.6" />
+    <text x="0" y="14" text-anchor="middle" font-family="'Playfair Display', serif" font-size="9" font-weight="700" letter-spacing="0.18em" fill="url(#goldDeep)">50 YEARS</text>
+  </g>
+
+  <g id="initials" transform="translate(120, 126)">
+    <text x="-20" y="7" text-anchor="middle" font-family="'Playfair Display', 'Cormorant Garamond', 'Great Vibes', serif" font-size="64" font-weight="700" font-style="italic" fill="url(#goldMetallic)" stroke="url(#goldDeep)" stroke-width="1">S</text>
+    <g transform="translate(0, -2)">
+      <path d="M 0 5 C -1 1 -5 1 -5 -2 C -5 -5 -1 -6 0 -3 C 1 -6 5 -5 5 -2 C 5 1 1 1 0 5 Z" fill="url(#goldMetallic)" stroke="url(#goldDeep)" stroke-width="0.5" />
+    </g>
+    <text x="20" y="17" text-anchor="middle" font-family="'Playfair Display', 'Cormorant Garamond', 'Great Vibes', serif" font-size="64" font-weight="700" font-style="italic" fill="url(#goldMetallic)" stroke="url(#goldDeep)" stroke-width="1">S</text>
+  </g>
+
+  <g id="ribbon" transform="translate(120, 182)">
+    <line x1="-48" y1="-12" x2="-14" y2="-12" stroke="url(#goldMetallic)" stroke-width="1" stroke-linecap="round" />
+    <circle cx="0" cy="-12" r="2" fill="url(#goldMetallic)" />
+    <line x1="14" y1="-12" x2="48" y2="-12" stroke="url(#goldMetallic)" stroke-width="1" stroke-linecap="round" />
+    <text x="0" y="2" text-anchor="middle" font-family="'Lato', sans-serif" font-size="8" font-weight="700" letter-spacing="0.22em" fill="url(#goldDeep)">SHASHI &amp; SOMNATH</text>
+    <text x="0" y="13" text-anchor="middle" font-family="'Playfair Display', serif" font-size="7" font-style="italic" letter-spacing="0.14em" fill="url(#goldMetallic)">Golden Jubilee • 1976 - 2026</text>
+  </g>
+
+  <text x="120" y="222" text-anchor="middle" font-size="8" fill="url(#goldMetallic)">✦</text>
+  <text x="120" y="24" text-anchor="middle" font-size="8" fill="url(#goldMetallic)">✦</text>
+</svg>
+

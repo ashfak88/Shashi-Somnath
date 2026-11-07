@@ -175,7 +175,7 @@ h2 em { font-family: var(--script); font-weight: 400; color: var(--gold) }
 .intro.open .intro-shade { opacity: 0; transition: opacity .9s ease }
 .intro.open .intro-sparkles { opacity: 0; transition: opacity .4s ease }
 .intro.open .intro-center { opacity: 0; transform: translate(-50%, -50%) scale(.94); transition: opacity .4s ease, transform .4s ease; pointer-events: none }
-.intro.done { opacity: 0; visibility: hidden; pointer-events: none; display: none }
+.intro.done { opacity: 0; visibility: hidden; pointer-events: none; }
 
 /* ═══════════════════════════════════════════════════
    HERO / INVITATION CARD
@@ -354,13 +354,23 @@ h2 em { font-family: var(--script); color: var(--gold); font-weight: 400 }
 }
 
 /* Rose petals */
-.rose-petal-rain { position: absolute; inset: 0; z-index: 4; pointer-events: none; overflow: hidden }
+.rose-petal-rain {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  overflow: hidden;
+}
 .rose-petal {
-  position: absolute; top: -14%; width: 9px; height: 14px;
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 15px;
   border-radius: 70% 30% 70% 30%;
-  background: linear-gradient(135deg, #fde27a, #c99a10 55%, #7a5c00);
-  box-shadow: 0 1px 5px rgba(100,70,0,.2);
-  animation: roseFall 5.4s linear infinite
+  background: linear-gradient(135deg, #ffe585, #d4a620 52%, #855f04);
+  box-shadow: 0 1px 6px rgba(100, 70, 0, 0.28);
+  animation: roseFall 6s linear infinite;
+  pointer-events: none;
 }
 .rp1{left:38%;animation-delay:-4.77s;animation-duration:4.65s;transform:rotate(47deg)}
 .rp2{left:75%;animation-delay:-4.34s;animation-duration:5.10s;transform:rotate(94deg)}
@@ -387,9 +397,10 @@ h2 em { font-family: var(--script); color: var(--gold); font-weight: 400 }
 .rp23{left:76%;animation-delay:-0.51s;animation-duration:5.55s;transform:rotate(1deg)}
 .rp24{left:16%;animation-delay:-0.08s;animation-duration:6.00s;transform:rotate(48deg)}
 @keyframes roseFall {
-  0%   { transform: translate3d(0,-8vh,0) rotate(0deg); opacity: 0 }
-  8%   { opacity: 1 }
-  100% { transform: translate3d(38px,62vh,0) rotate(520deg); opacity: 0 }
+  0%   { transform: translate3d(0, -20px, 0) rotate(0deg); opacity: 0; }
+  6%   { opacity: 1; }
+  92%  { opacity: 0.95; }
+  100% { transform: translate3d(45px, 920px, 0) rotate(540deg); opacity: 0; }
 }
 
 /* ═══════════════════════════════════════════════════
@@ -503,6 +514,352 @@ h2 em { font-family: var(--script); color: var(--gold); font-weight: 400 }
 }
 
 .map-link { margin-top: 14px; position: relative; z-index: 4 }
+
+/* ── Monogram Logo & Location Extras ── */
+.intro-logo-wrap {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+}
+.hero-logo-wrap {
+  margin: 0 auto 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+  min-height: 130px;
+}
+.closing-logo-wrap {
+  margin: 0 auto 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+.ss-monogram-wrap {
+  display: inline-block;
+  position: relative;
+  user-select: none;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+.ss-monogram-wrap:hover {
+  transform: scale(1.04);
+}
+.venue-map-chip {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  letter-spacing: .06em;
+  padding: 3px 10px;
+  background: rgba(184,134,11,.1);
+  border-radius: 999px;
+  border: 1px solid rgba(184,134,11,.25);
+  transition: all .2s ease;
+}
+.venue-map-chip:hover {
+  background: var(--gold);
+  color: #fff;
+  border-color: var(--gold);
+}
+.venue-click-card {
+  text-decoration: none;
+  color: inherit;
+  transition: transform .2s ease, background-color .2s ease;
+  cursor: pointer;
+  position: relative;
+}
+.venue-click-card:hover {
+  background: rgba(255, 248, 220, 0.65);
+  transform: translateY(-2px);
+}
+.meta-tap-hint {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .05em;
+  text-decoration: underline;
+}
+
+/* ── Lord Ram & Sita Swayamvar Watermarks & Blessing Card ── */
+.ram-sita-watermark {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("/assets/ram-sita-swayamvar.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.11;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+.hero-watermark {
+  max-width: 480px;
+  max-height: 480px;
+  margin: auto;
+  opacity: 0.13;
+}
+.forever-watermark {
+  max-width: 420px;
+  max-height: 420px;
+  margin: auto;
+  opacity: 0.14;
+}
+.swayamvar-blessing-card {
+  margin: 18px auto 14px;
+  max-width: 340px;
+  padding: 14px;
+  background: linear-gradient(135deg, rgba(255, 253, 245, 0.96), rgba(254, 247, 230, 0.92));
+  border: 1.5px solid rgba(184, 134, 11, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(100, 70, 10, 0.12), 0 0 0 4px rgba(212, 166, 42, 0.08);
+  position: relative;
+  z-index: 2;
+}
+.swayamvar-img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1px solid rgba(184, 134, 11, 0.25);
+  display: block;
+  margin: 0 auto;
+}
+.blessing-caption {
+  margin: 10px 0 0;
+  font-family: var(--serif);
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+.blessing-caption em {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  display: block;
+  margin-top: 4px;
+  letter-spacing: 0.08em;
+}
+
+/* ── Scratch Venue Card Styles ── */
+.scratch-section-wrap {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.scratch-venue-outer {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #fffcf2 0%, #fff8e6 100%);
+  border: 2px solid rgba(184, 134, 11, 0.35);
+  border-radius: 24px;
+  padding: 22px 18px;
+  box-shadow: 0 16px 44px rgba(80, 50, 10, 0.14), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+  position: relative;
+}
+.scratch-card-header {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.scratch-badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  color: var(--gold);
+  background: rgba(184, 134, 11, 0.1);
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.scratch-heading {
+  font-family: var(--display);
+  font-size: 26px;
+  color: var(--ink);
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+.scratch-sub {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
+}
+.scratch-card-container {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(60, 35, 5, 0.15);
+  border: 2px solid #dfb145;
+  background: #fffef8;
+  cursor: grab;
+  touch-action: none;
+}
+.scratch-card-container:active {
+  cursor: grabbing;
+}
+.scratch-revealed-content {
+  position: relative;
+  z-index: 1;
+  padding: 24px 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  background: radial-gradient(circle at center, #fffef7 30%, #fff7de 100%);
+}
+.venue-crest-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #fff3c4, #fde48a);
+  border: 1px solid #d4a62a;
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin-bottom: 12px;
+}
+.venue-crest-badge .crest-icon {
+  font-size: 12px;
+}
+.venue-crest-badge .crest-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: #5c3a03;
+  font-family: var(--sans);
+}
+.venue-palace-title {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  color: #301b00;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.venue-palace-address {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: #5c421b;
+  margin: 0 0 14px;
+  line-height: 1.45;
+  max-width: 360px;
+}
+.venue-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.meta-pill {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(184, 134, 11, 0.12);
+  border: 1px solid rgba(184, 134, 11, 0.25);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.venue-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 320px;
+}
+.scratch-maps-btn {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 12px;
+  box-shadow: 0 6px 18px rgba(184, 134, 11, 0.3);
+}
+.scratch-copy-btn {
+  width: 100%;
+  padding: 10px 18px;
+  font-size: 11px;
+  background: transparent;
+  color: var(--ink);
+  border-color: rgba(184, 134, 11, 0.4);
+}
+.scratch-copy-btn:hover {
+  background: rgba(184, 134, 11, 0.08);
+}
+.scratch-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s ease;
+}
+.scratch-card-container.revealed .scratch-canvas {
+  opacity: 0;
+  pointer-events: none;
+}
+.scratch-card-footer {
+  margin-top: 12px;
+  text-align: center;
+}
+.scratch-status-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.scratch-hint {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.scratch-instant-btn {
+  background: none;
+  border: none;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: underline;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+.scratch-instant-btn:hover {
+  color: var(--gold-lt);
+}
+.scratch-celebrate-note {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gold);
+  background: rgba(184, 134, 11, 0.08);
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px dashed rgba(184, 134, 11, 0.35);
+  display: inline-block;
+}
 
 /* ═══════════════════════════════════════════════════
    GALLERY
