@@ -168,8 +168,8 @@ export default function VenueScratchCard() {
     <div className="scratch-venue-outer">
       <div className="scratch-card-header">
         <span className="scratch-badge">✦ GOLDEN REVELATION ✦</span>
-        <h3 className="scratch-heading">Celebration Venue</h3>
-        <p className="scratch-sub">Scratch the golden foil below to unveil where we will celebrate!</p>
+        <h3 className="scratch-heading">Celebration <em>Venue</em></h3>
+        <p className="scratch-sub">Scratch the golden foil to unveil the palace &amp; directions!</p>
       </div>
 
       <div
@@ -185,6 +185,10 @@ export default function VenueScratchCard() {
           <div className="venue-crest-badge">
             <span className="crest-icon">📍</span>
             <span className="crest-text">VENUE CONFIRMED</span>
+          </div>
+
+          <div className="venue-occasion-tag">
+            <span>🏅 50th Anniversary • Golden Jubilee</span>
           </div>
 
           <h4 className="venue-palace-title">{VENUE_NAME}</h4>

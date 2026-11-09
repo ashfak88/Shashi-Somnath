@@ -51,16 +51,13 @@ export default function Page() {
   </button>
 </div>
 
-<audio id="bgMusic" loop preload="auto"><source src="assets/new song.mpeg" type="audio/mpeg" /></audio>
+<audio id="bgMusic" loop preload="auto"><source src="assets/latest song.mpeg" type="audio/mpeg" /></audio>
 <button className="music-fab" id="musicBtn" aria-label="Play music">♫</button>
 
 <nav className="side-nav" aria-label="Invitation sections">
   <button data-target="home" className="active"></button>
   <button data-target="invite"></button>
   <button data-target="date"></button>
-  <button data-target="countdown"></button>
-  <button data-target="journey"></button>
-  <button data-target="forever"></button>
   <button data-target="rsvp"></button>
 </nav>
 
@@ -88,7 +85,7 @@ export default function Page() {
     </div>
   </section>
 
-  {/* ── DATE / MILESTONE ── */}
+  {/* ── DATE & COUNTDOWN (PAGE 2) ── */}
   <section className="section date-section" id="date">
     <div className="section-inner reveal">
       <p className="eyebrow">MARK YOUR CALENDAR FOR THE GOLDEN JUBILEE</p>
@@ -96,178 +93,142 @@ export default function Page() {
       <div className="date-big">{"22 "}<span>•</span>{" 11 "}<span>•</span>{" 2026"}</div>
       <p className="weekday">SUNDAY, 22 NOVEMBER 2026</p>
       <div className="detail-line"></div>
-      <div className="quick-details">
-        <div><strong>Time</strong><span>12:00 PM</span></div>
-        <div><strong>Occasion</strong><span>50th Anniversary (Golden Jubilee)</span></div>
-        <div><strong>Venue</strong><span>Wedding bells, S K Mohit Palace<br />Jhilmil Indrustial Area, Behind Jhilmil Metro Station<br />New Delhi-92<br /><a href="https://share.google/eQxPOW2qwpx2CBa8y" target="_blank" rel="noopener noreferrer" className="venue-map-chip">📍 Open Google Maps</a></span></div>
-      </div>
-      <button className="gold-btn" id="calendarBtn">▣&nbsp;&nbsp;Add to Calendar</button>
-    </div>
-  </section>
 
-  {/* ── COUNTDOWN ── */}
-  <section className="section countdown-section" id="countdown">
-    <div className="section-inner countdown-wrap reveal">
-      <p className="eyebrow">COUNTING DOWN TO THE CELEBRATION</p>
-      <div className="timer" id="timer">
-        <div><b id="days">{timeLeft.days}</b><span>DAYS</span></div>
-        <i>:</i>
-        <div><b id="hours">{timeLeft.hours}</b><span>HOURS</span></div>
-        <i>:</i>
-        <div><b id="mins">{timeLeft.mins}</b><span>MINUTES</span></div>
-        <i>:</i>
-        <div><b id="secs">{timeLeft.secs}</b><span>SECONDS</span></div>
-      </div>
-      <div className="garland-stage">
-        <div className="swayamvar-blessing-card">
-          <img
-            src="assets/ram-sita-swayamvar.jpg"
-            alt="Divine Blessings of Shri Ram and Mata Sita Swayamvar"
-            className="swayamvar-img"
-          />
-          <p className="blessing-caption">
-            ✦ सिया राम मय सब जग जानी ✦
-            <em>Seeking the divine blessings of Shri Ram &amp; Mata Sita on 50 Golden Years</em>
-          </p>
-        </div>
-        <div className="anniversary-emblem-stage">
-          <div className="big-50">50</div>
-          <div className="emblem-sub">Years Together</div>
-          <div className="emblem-hearts">❤ &nbsp; ❤ &nbsp; ❤</div>
-        </div>
-        <div className="garland-glow"></div>
-
-        {/* Falling petals placed over the picture and stage */}
-        <div className="rose-petal-rain" aria-hidden="true">
-          <span className="rose-petal rp1"></span><span className="rose-petal rp2"></span>
-          <span className="rose-petal rp3"></span><span className="rose-petal rp4"></span>
-          <span className="rose-petal rp5"></span><span className="rose-petal rp6"></span>
-          <span className="rose-petal rp7"></span><span className="rose-petal rp8"></span>
-          <span className="rose-petal rp9"></span><span className="rose-petal rp10"></span>
-          <span className="rose-petal rp11"></span><span className="rose-petal rp12"></span>
-          <span className="rose-petal rp13"></span><span className="rose-petal rp14"></span>
-          <span className="rose-petal rp15"></span><span className="rose-petal rp16"></span>
-          <span className="rose-petal rp17"></span><span className="rose-petal rp18"></span>
-          <span className="rose-petal rp19"></span><span className="rose-petal rp20"></span>
-          <span className="rose-petal rp21"></span><span className="rose-petal rp22"></span>
-          <span className="rose-petal rp23"></span><span className="rose-petal rp24"></span>
-        </div>
-      </div>
-      <p className="moment-caption">Fifty years of love — and counting.</p>
-    </div>
-  </section>
-
-  {/* ── PROGRAMME & EXACT LOCATION ── */}
-  <section className="section events-section" id="journey">
-    <div className="timeline-bg"></div>
-    <div className="veil dark"></div>
-    <div className="section-inner events-wrap">
-      <div className="title-block reveal">
-        <p className="eyebrow">CELEBRATING TOGETHER</p>
-        <h2>{"Celebration "}<em>Programme</em></h2>
-      </div>
-      <div className="single-program-wrap reveal">
-        <article className="single-program-card">
-          <div className="program-badge">50TH ANNIVERSARY • GOLDEN JUBILEE</div>
-          <h3 className="program-title">Golden Jubilee Celebration</h3>
-          <div className="program-divider"></div>
-          <div className="program-meta-list">
-            <div className="program-meta-item">
-              <span className="meta-icon">📅</span>
-              <div>
-                <span className="meta-label">DATE</span>
-                <strong className="meta-value">Sunday, 22 November 2026</strong>
-              </div>
-            </div>
-            <div className="program-meta-item">
-              <span className="meta-icon">⏰</span>
-              <div>
-                <span className="meta-label">PROGRAM TIME</span>
-                <strong className="meta-value">12:00 PM onwards</strong>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      {/* Interactive Venue Scratch Card */}
-      <div className="scratch-section-wrap reveal">
+      {/* Interactive Venue Scratch Card Right Here */}
+      <div className="venue-scratch-embed">
         <VenueScratchCard />
       </div>
+
+      <button className="gold-btn" id="calendarBtn">▣&nbsp;&nbsp;Add to Calendar</button>
+
+      {/* Countdown & Blessings */}
+      <div className="inline-countdown-block">
+        <div className="countdown-divider"></div>
+        <p className="eyebrow">COUNTING DOWN TO THE CELEBRATION</p>
+        <div className="timer" id="timer">
+          <div><b id="days">{timeLeft.days}</b><span>DAYS</span></div>
+          <i>:</i>
+          <div><b id="hours">{timeLeft.hours}</b><span>HOURS</span></div>
+          <i>:</i>
+          <div><b id="mins">{timeLeft.mins}</b><span>MINUTES</span></div>
+          <i>:</i>
+          <div><b id="secs">{timeLeft.secs}</b><span>SECONDS</span></div>
+        </div>
+
+        <div className="garland-stage">
+          <div className="swayamvar-blessing-card">
+            <img
+              src="assets/ram-sita-swayamvar.jpg"
+              alt="Divine Blessings of Shri Ram and Mata Sita Swayamvar"
+              className="swayamvar-img"
+            />
+            <p className="blessing-caption">
+              ✦ सिया राम मय सब जग जानी ✦
+              <em>Seeking the divine blessings of Shri Ram &amp; Mata Sita on 50 Golden Years</em>
+            </p>
+          </div>
+          <div className="anniversary-emblem-stage">
+            <div className="big-50">50</div>
+            <div className="emblem-sub">Years Together</div>
+            <div className="emblem-hearts">❤ &nbsp; ❤ &nbsp; ❤</div>
+          </div>
+          <div className="garland-glow"></div>
+
+          {/* Falling petals placed over the picture and stage */}
+          <div className="rose-petal-rain" aria-hidden="true">
+            <span className="rose-petal rp1"></span><span className="rose-petal rp2"></span>
+            <span className="rose-petal rp3"></span><span className="rose-petal rp4"></span>
+            <span className="rose-petal rp5"></span><span className="rose-petal rp6"></span>
+            <span className="rose-petal rp7"></span><span className="rose-petal rp8"></span>
+            <span className="rose-petal rp9"></span><span className="rose-petal rp10"></span>
+            <span className="rose-petal rp11"></span><span className="rose-petal rp12"></span>
+            <span className="rose-petal rp13"></span><span className="rose-petal rp14"></span>
+            <span className="rose-petal rp15"></span><span className="rose-petal rp16"></span>
+            <span className="rose-petal rp17"></span><span className="rose-petal rp18"></span>
+            <span className="rose-petal rp19"></span><span className="rose-petal rp20"></span>
+            <span className="rose-petal rp21"></span><span className="rose-petal rp22"></span>
+            <span className="rose-petal rp23"></span><span className="rose-petal rp24"></span>
+          </div>
+        </div>
+        <p className="moment-caption">Fifty years of love — and counting.</p>
+      </div>
     </div>
   </section>
 
-
-  {/* ── FOREVER ── */}
-  <section className="section forever-section" id="forever">
-    <div className="lotus-bg"></div>
-    <div className="ram-sita-watermark forever-watermark" aria-hidden="true"></div>
-    <div className="section-inner forever-copy reveal">
-      <h2>Fifty<br /><em>{"Golden Years "}<span className="plain-infinity">∞</span></em></h2>
-      <p>Your love has been our greatest blessing,<br />your togetherness our family's strength,<br />and your story our forever inspiration.</p>
-      <span>With all our love,</span>
-      <h3>{"Shashi "}<b>❤</b>{" Somnath"}</h3>
-    </div>
-  </section>
-
-
-  {/* ── RSVP ── */}
+  {/* ── BLESSINGS, RSVP & FAMILY (PAGE 3) ── */}
   <section className="section rsvp-section" id="rsvp">
     <div className="section-inner reveal">
-      <p className="eyebrow">YOUR PRESENCE IS OUR PRESENT</p>
-      <h2>Will you celebrate<br /><em>with us?</em></h2>
-      <p className="rsvp-copy">We joyfully look forward to your gracious presence as we celebrate this golden milestone.</p>
-
-      {/* RSVP Guest List */}
-      <div className="rsvp-guests">
-        <p className="rsvp-guest-label">RSVP</p>
-        <ul className="rsvp-list">
-          <li><span className="rsvp-check">✦</span> Ravi &amp; Shikha Katyal</li>
-          <li><span className="rsvp-check">✦</span> Capt. Vikas &amp; Vineeta Anand</li>
-          <li><span className="rsvp-check">✦</span> Shivam &amp; Neha Katyal</li>
-        </ul>
-      </div>
-
-      {/* RSVP Response / Demo Submission */}
-      {rsvpStatus ? (
-        <div className="rsvp-success-card">
-          <div className="success-badge">✓ RSVP SUBMITTED (DEMO)</div>
-          <h3>{rsvpStatus === 'attending' ? "Joyfully Accepted! ❤️" : "Response Recorded"}</h3>
-          <p>
-            {rsvpStatus === 'attending'
-              ? "Thank you! We look forward to celebrating Shashi & Somnath's Golden Jubilee with you."
-              : "Thank you for letting us know. Your blessings and warm wishes are deeply appreciated."}
-          </p>
-          <button className="outline-btn small-btn" onClick={() => setRsvpStatus(null)}>Change Response</button>
+      {/* Milestone Quote Tribute */}
+      <div className="forever-quote-card">
+        <div className="ram-sita-watermark forever-watermark" aria-hidden="true"></div>
+        <p className="eyebrow">FIFTY GOLDEN YEARS <span className="plain-infinity">∞</span></p>
+        <p className="forever-quote-text">
+          "Your love has been our greatest blessing, your togetherness our family's strength, and your story our forever inspiration."
+        </p>
+        <div className="quote-signature">
+          <span>With all our love,</span>
+          <h3>{"Shashi "}<b>❤</b>{" Somnath"}</h3>
         </div>
-      ) : (
-        <>
-          <button className="gold-btn" id="rsvpBtn" onClick={() => setIsModalOpen(true)}>✦&nbsp;&nbsp;Submit Your RSVP</button>
-          <p className="tiny-note">Click to let us know if you will be celebrating with us.</p>
-        </>
-      )}
-    </div>
-  </section>
-
-  {/* ── CLOSING ── */}
-  <section className="section closing-section" id="closing">
-    <div className="closing-bg"></div>
-    <div className="section-inner closing-copy reveal">
-      <div className="closing-logo-wrap">
-        <LogoSS size={90} variant="dark" className="closing-monogram" />
       </div>
-      <span className="lantern">✦</span>
-      <h2>Thank You</h2>
-      <p>for being a part of<br />our golden celebration</p>
-      <div className="love">❤</div>
-      <footer>
-        made with love by
-        <b className="footer-names">
-          <span>Ravi &amp; Shikha Katyal</span>
-          <span>Capt. Vikas &amp; Vineeta Anand</span>
-          <span>Shivam &amp; Neha Katyal</span>
-        </b>
-      </footer>
+
+      {/* RSVP Section */}
+      <div className="rsvp-block">
+        <p className="eyebrow">YOUR PRESENCE IS OUR PRESENT</p>
+        <h2>Will you celebrate<br /><em>with us?</em></h2>
+        <p className="rsvp-copy">We joyfully look forward to your gracious presence as we celebrate this golden milestone.</p>
+
+        {/* Cordially Invited By & Kids */}
+        <div className="rsvp-guests">
+          <p className="rsvp-guest-label">CORDIALLY INVITED BY</p>
+          <ul className="rsvp-list">
+            <li><span className="rsvp-check">✦</span> Ravi &amp; Shikha Katyal</li>
+            <li><span className="rsvp-check">✦</span> Capt. Vikas &amp; Vineeta Anand</li>
+            <li><span className="rsvp-check">✦</span> Shivam &amp; Neha Katyal</li>
+          </ul>
+
+          {/* Kids Names */}
+          <div className="rsvp-kids-section">
+            <p className="rsvp-kids-label">With lots of love from our little ones</p>
+            <div className="rsvp-kids-pills">
+              <span className="kid-pill">Kuhu</span>
+              <span className="kid-pill">Prisha</span>
+              <span className="kid-pill">Adira</span>
+              <span className="kid-pill">Pihu</span>
+              <span className="kid-pill">Ashvi</span>
+            </div>
+          </div>
+        </div>
+
+        {/* RSVP Action */}
+        {rsvpStatus ? (
+          <div className="rsvp-success-card">
+            <div className="success-badge">✓ RSVP SUBMITTED</div>
+            <h3>{rsvpStatus === 'attending' ? "Joyfully Accepted! ❤️" : "Response Recorded"}</h3>
+            <p>
+              {rsvpStatus === 'attending'
+                ? "Thank you! We look forward to celebrating Shashi & Somnath's Golden Jubilee with you."
+                : "Thank you for letting us know. Your blessings and warm wishes are deeply appreciated."}
+            </p>
+            <button className="outline-btn small-btn" onClick={() => setRsvpStatus(null)}>Change Response</button>
+          </div>
+        ) : (
+          <>
+            <button className="gold-btn" id="rsvpBtn" onClick={() => setIsModalOpen(true)}>✦&nbsp;&nbsp;Submit Your RSVP</button>
+            <p className="tiny-note">Click to let us know if you will be celebrating with us.</p>
+          </>
+        )}
+      </div>
+
+      {/* Thank You & Warm Closing */}
+      <div className="closing-inline">
+        <div className="closing-logo-wrap">
+          <LogoSS size={82} variant="dark" className="closing-monogram" />
+        </div>
+        <span className="lantern">✦</span>
+        <h2 className="closing-thank-you">Thank You</h2>
+        <p className="closing-blessing-note">for being a cherished part of our golden celebration</p>
+        <div className="love">❤</div>
+      </div>
     </div>
   </section>
 
