@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import LogoSS from './LogoSS.jsx'
 import VenueScratchCard from './VenueScratchCard.jsx'
 
-const PROGRAM_TIME = new Date('2026-11-22T12:00:00+05:30').getTime()
+const PROGRAM_TIME = new Date('2026-12-05T19:00:00+05:30').getTime()
 
 function getRemainingTime() {
   const diff = Math.max(0, PROGRAM_TIME - Date.now())
@@ -90,8 +90,8 @@ export default function Page() {
     <div className="section-inner reveal">
       <p className="eyebrow">MARK YOUR CALENDAR FOR THE GOLDEN JUBILEE</p>
       <h2>{"CELEBRATE "}<em>the</em>{" MILESTONE"}</h2>
-      <div className="date-big">{"22 "}<span>•</span>{" 11 "}<span>•</span>{" 2026"}</div>
-      <p className="weekday">SUNDAY, 22 NOVEMBER 2026</p>
+      <div className="date-big">{"05 "}<span>•</span>{" 12 "}<span>•</span>{" 2026"}</div>
+      <p className="weekday">SATURDAY, 5 DECEMBER 2026</p>
       <div className="detail-line"></div>
 
       {/* Interactive Venue Scratch Card Right Here */}

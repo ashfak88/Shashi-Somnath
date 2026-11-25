@@ -195,8 +195,8 @@ export default function VenueScratchCard() {
           <p className="venue-palace-address">{VENUE_ADDRESS}</p>
 
           <div className="venue-meta-pills">
-            <span className="meta-pill">📅 Sunday, 22 Nov 2026</span>
-            <span className="meta-pill">⏰ 12:00 PM Onwards</span>
+            <span className="meta-pill">📅 Saturday, 5 Dec 2026</span>
+            <span className="meta-pill">⏰ 7:00 PM Onwards</span>
           </div>
 
           <div className="venue-action-buttons">
